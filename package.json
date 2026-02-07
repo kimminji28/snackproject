@@ -6,6 +6,7 @@
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "forwarded": "^0.2.0",
+    "node.js": "^0.0.1-security",
     "nodemon": "^3.1.11",
     "oracledb": "^6.10.0"
   }

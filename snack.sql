@@ -38,7 +38,7 @@ values ('S0004', '두바이초콜릿', 12000, '씹히는 카다이프가 일품�
 insert into Sproduct (snack_no, snack_name, price, content, weight, kcal, review, delivery_c, category_no)
 values ('S0005', '하리보', 15900, '귀여운 곰돌이 젤리입니다.', '100g', '337kcal', 4, 3000, 30);
 insert into Sproduct (snack_no, snack_name, price, content, weight, kcal, review, delivery_c, category_no)
-values ('S0006', '수수깡젤리', 790, '수수깡 모양 젤리입니다.', '125g', '485kcal', 4, 3000, 30);
+values ('S0006', '수수깡젤리', 2500, '수수깡 모양 젤리입니다.', '125g', '485kcal', 4, 3000, 30);
 
 --카테고리 데이터 테이블
 CREATE table Scategory (

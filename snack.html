@@ -4,8 +4,318 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snack product</title>
+    <link rel="stylesheet" href="snack.css">
 </head>
 <body>
+    <div id="container">
+    <header>
+    <div class="header-top">
+        <div class="logo">김호두루미</div>
+        <div class="header-icons">
+            <div class="icon-item">
+                <span>🔐</span>
+                <p>로그인</p>
+            </div>
+            <div class="icon-item">
+                <span>🛒</span>
+                <p>장바구니</p>
+            </div>
+            <div class="icon-item">
+                <span>👤</span>
+                <p>마이페이지</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="header-search">
+        <div class="search-bar">
+            <input type="text" placeholder="검색어를 입력하세요">
+            <button type="button">🔍</button>
+        </div>
+    </div>
+        
+         <!-- 네비게이션 -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#" class="active">카테고리</a></li>
+            <li><a href="#">새상품</a></li>
+            <li><a href="#">인기상품</a></li>
+            <li><a href="#">리뷰</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">공지사항</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="main-container">
+        <!-- 타이틀 -->
+        <h1 class="page-title">과자</h1>
+
+        <div class="content-wrapper">
+            <!-- 왼쪽 카테고리 사이드바 -->
+            <aside class="sidebar">
+                <h3>카테고리</h3>
+                <ul class="category-list">
+                    <li><a href="#" class="active">과자</a></li>
+                    <li><a href="#">초콜릿</a></li>
+                    <li><a href="#">젤리</a></li>
+                </ul>
+            </aside>
+
+            <!-- 상품 리스트 -->
+            <section class="product-section">
+                <!-- 정렬 옵션 -->
+                <div class="sort-options">
+                    <select>
+                        <option>추천순</option>
+                        <option>인기많은순</option>
+                        <option>낮은가격순</option>
+                        <option>높은가격순</option>
+                        <option>리뷰많은순</option>
+                    </select>
+                </div>
+
+                <!-- 상품 그리드 -->
+                <div class="product-grid">
+                    <!-- 상품 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/250x250/FF6B6B/FFFFFF?text=초코칩쿠키" alt="초코칩 쿠키">
+                            <button class="cart-btn">🛒</button>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">홈런볼 43g</p>
+                            <p class="product-price">1,800<span>원</span></p>
+                            <div class="product-rating">
+                                <span>⭐ 4</span>
+                                <span class="review-count">288</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 상품 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/250x250/4ECDC4/FFFFFF?text=버터쿠키" alt="버터 쿠키">
+                            <button class="cart-btn">🛒</button>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">사또밥 67g</p>
+                            <p class="product-price">1,200<span>원</span></p>
+                            <div class="product-rating">
+                                <span>⭐ 5</span>
+                                <span class="review-count">378</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 상품 3-->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/250x250/FFB6B9/FFFFFF?text=마카롱" alt="마카롱">
+                            <button class="cart-btn">🛒</button>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">스윙칩 60g</p>
+                            <p class="product-price">1,200<span>원</span></p>
+                            <div class="product-rating">
+                                <span>⭐ 4</span>
+                                <span class="review-count">510</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 상품 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/250x250/FFE66D/333333?text=치즈크래커" alt="치즈 크래커">
+                            <button class="cart-btn">🛒</button>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">페레로로쉐 63g</p>
+                            <p class="product-price">3,400<span>원</span></p>
+                            <div class="product-rating">
+                                <span>⭐ 3</span>
+                                <span class="review-count">87</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 상품 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/250x250/A8E6CF/333333?text=허니버터칩" alt="허니버터칩">
+                            <button class="cart-btn">🛒</button>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">두바이초콜릿 200g</p>
+                            <p class="product-price">12,000<span>원</span></p>
+                            <div class="product-rating">
+                                <span>⭐ 2</span>
+                                <span class="review-count">147</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 상품 6 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/250x250/BAE1FF/333333?text=소다크래커" alt="소다 크래커">
+                            <button class="cart-btn">🛒</button>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">가나초콜릿 70g</p>
+                            <p class="product-price">1,100<span>원</span></p>
+                            <div class="product-rating">
+                                <span>⭐ 5</span>
+                                <span class="review-count">85</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 상품 7 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/250x250/FF9999/FFFFFF?text=딸기쿠키" alt="딸기 쿠키">
+                            <button class="cart-btn">🛒</button>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">하리보 100g</p>
+                            <p class="product-price">15,900<span>원</span></p>
+                            <div class="product-rating">
+                                <span>⭐ 4</span>
+                                <span class="review-count">65</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 상품 8 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/250x250/C7CEEA/333333?text=오트밀쿠키" alt="오트밀 쿠키">
+                            <button class="cart-btn">🛒</button>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">수수깡젤리 125g</p>
+                            <p class="product-price">2,500<span>원</span></p>
+                            <div class="product-rating">
+                                <span>⭐ 4</span>
+                                <span class="review-count"476</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 상품 9 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/250x250/FFDAC1/333333?text=땅콩과자" alt="땅콩 과자">
+                            <button class="cart-btn">🛒</button>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name">줄넘기젤리 36g</p>
+                            <p class="product-price">400<span>원</span></p>
+                            <div class="product-rating">
+                                <span>⭐ 3</span>
+                                <span class="review-count">32</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 페이징 -->
+                <div class="pagination">
+                    <button class="page-btn">«</button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">4</button>
+                    <button class="page-btn">5</button>
+                    <button class="page-btn">»</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 김호두루미. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">고객센터</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 고정 버튼들 (오른쪽 하단) -->
+    <div class="fixed-buttons">
+        <!-- 채팅 버튼 -->
+        <button class="chat-btn" onclick="openChat()" title="고객센터 채팅">
+            💬
+        </button>
+        <!-- 위로가기 버튼 -->
+        <button class="scroll-top-btn" onclick="scrollToTop()" title="맨 위로">
+            ↑
+        </button>
+    </div>
+    </div>
+    <script>
+        // 채팅 열기 함수
+        function openChat() {
+            alert('고객센터 채팅을 연결합니다.');
+        }
+
+        // 맨 위로 스크롤 함수
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // 스크롤 시 위로가기 버튼 표시/숨김
+        window.addEventListener('scroll', function() {
+            const scrollTopBtn = document.querySelector('.scroll-top-btn');
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.visibility = 'visible';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.visibility = 'hidden';
+            }
+        });
+    </script>
+</body>
+
+
     <script src="snack.js"></script>
+    <script>
+        fetch("http://localhost:3000")
+        .then((resp) => resp.json())
+        .then((data) => {
+            data.Foreach((ele) => {
+                const tr = makeRow(ele);
+                document.querySelector("#snackmemberList").appendChild(tr);
+            });
+        });
+    </script>
+
+    <script>
+        function openChat() {
+            alert('고객센터 채팅을 연결합니다.');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
 </body>
 </html>
