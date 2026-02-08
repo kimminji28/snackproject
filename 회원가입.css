@@ -1,0 +1,148 @@
+body {
+      font-family: "Pretendard", Arial, sans-serif;
+      background: linear-gradient(120deg, #fff1f1, #f7f7ff);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 520px;
+      background: white;
+      margin: 60px auto;
+      padding: 35px 40px;
+      border-radius: 18px;
+      box-shadow: 0px 10px 30px rgba(0,0,0,0.12);
+      border: 1px solid #f1f1f1;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 26px;
+      font-weight: 800;
+      color: #222;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      outline: none;
+      font-size: 14px;
+      transition: 0.2s;
+      background: #fafafa;
+    }
+
+    input:focus {
+      border: 1px solid #ff5a5a;
+      background: #fff;
+      box-shadow: 0px 0px 0px 3px rgba(255,90,90,0.15);
+    }
+
+    .id-box {
+      display: flex;
+      gap: 10px;
+    }
+
+    .id-box input {
+      flex: 1;
+    }
+
+    .check-btn {
+      width: 120px;
+      border: none;
+      border-radius: 12px;
+      background: #444;
+      color: white;
+      font-size: 13px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .check-btn:hover {
+      background: #222;
+    }
+
+    .msg {
+      font-size: 13px;
+      margin-top: 8px;
+      display: none;
+    }
+
+    .msg.ok {
+      color: green;
+      font-weight: 700;
+    }
+
+    .msg.fail {
+      color: red;
+      font-weight: 700;
+    }
+
+    .note {
+      font-size: 12px;
+      margin-top: 6px;
+      color: gray;
+    }
+
+    .btn-area {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    button.submit-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(90deg, #ff5a5a, #ff8080);
+      color: white;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button.submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0px 8px 15px rgba(255,90,90,0.3);
+    }
+
+    button.back-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 14px;
+      background: #444;
+      color: white;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button.back-btn:hover {
+      background: #222;
+    }
+
+    .line {
+      margin: 25px 0;
+      height: 1px;
+      background: #eee;
+    }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>로그인</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>로그인</h2>
+
+    <form id="loginForm">
+      <label for="userId">아이디</label>
+      <input type="text" id="userId" placeholder="아이디 입력" required />
+
+      <label for="userPw">비밀번호</label>
+      <input type="password" id="userPw" placeholder="비밀번호 입력" required />
+
+      <button type="submit">로그인</button>
+      <button type="button" class="back-btn" onclick="history.back()">뒤로가기</button>
+
+      <p class="msg" id="msgBox">아이디/비밀번호가 없습니다. 회원가입 해주세요.</p>
+
+      <div class="signup-link">
+        아직 회원이 아니신가요? <a href="signup.html">회원가입</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // 테스트용 임시 회원 데이터 (원래는 DB에서 조회해야 함)
+    const users = [
+      { id: "test", pw: "1234" },
+      { id: "minji", pw: "1111" }
+    ];
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const inputId = document.getElementById("userId").value;
+      const inputPw = document.getElementById("userPw").value;
+      const msgBox = document.getElementById("msgBox");
+
+      const foundUser = users.find(user => user.id === inputId && user.pw === inputPw);
+
+      if(foundUser){
+        msgBox.style.display = "none";
+        alert("로그인 성공!");
+        location.href = "main.html"; // 로그인 성공 후 이동 페이지
+      } else {
+        msgBox.style.display = "block";
+      }
+    });
+
+
+
+    async function login() {
+      const user_id = document.getElementById("userId").value;
+      const user_pw = document.getElementById("userPw").value;
+
+      const resp = await fetch("http://localhost:3000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ user_id, user_pw })
+      });
+
+      const data = await resp.json();
+
+      if (data.result === "OK") {
+        if (data.role === "ADMIN") {
+          location.href = "adminMain.html";
+        } else {
+          location.href = "userMain.html";
+        }
+      } else {
+        document.getElementById("msg").innerText = data.msg;
+      }
+    }
+
+    document.querySelector("#loginSubmit").addEventListener("click", async () => {
+  const user_id = document.querySelector("#user_id").value;
+  const user_pw = document.querySelector("#user_pw").value;
+
+  const resp = await fetch("http://localhost:3000/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ user_id, user_pw })
+  });
+
+  const data = await resp.json();
+
+  if (data.retCode === "OK") {
+    alert("로그인 성공!");
+  } else {
+    alert("아이디/비밀번호가 없습니다. 회원가입 해주세요.");
+  }
+});
+  </script>
+</body>
+</html>

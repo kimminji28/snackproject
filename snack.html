@@ -12,7 +12,7 @@
     <div class="header-top">
         <div class="logo">김호두루미</div>
         <div class="header-icons">
-            <div class="icon-item">
+            <div class="icon-item" id="loginBtn">
                 <span>🔐</span>
                 <p>로그인</p>
             </div>
@@ -82,7 +82,7 @@
                     <!-- 상품 1 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/250x250/FF6B6B/FFFFFF?text=초코칩쿠키" alt="초코칩 쿠키">
+                            <img src="img/홈런볼.jpg" alt="홈런볼">
                             <button class="cart-btn">🛒</button>
                         </div>
                         <div class="product-info">
@@ -98,7 +98,7 @@
                     <!-- 상품 2 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/250x250/4ECDC4/FFFFFF?text=버터쿠키" alt="버터 쿠키">
+                            <img src="img/사또밥.jpg" alt="사또밥">
                             <button class="cart-btn">🛒</button>
                         </div>
                         <div class="product-info">
@@ -114,7 +114,7 @@
                     <!-- 상품 3-->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/250x250/FFB6B9/FFFFFF?text=마카롱" alt="마카롱">
+                            <img src="img/스윙칩.jpg" alt="스윙칩">
                             <button class="cart-btn">🛒</button>
                         </div>
                         <div class="product-info">
@@ -130,7 +130,7 @@
                     <!-- 상품 4 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/250x250/FFE66D/333333?text=치즈크래커" alt="치즈 크래커">
+                            <img src="img/페레로로쉐.jpg" alt="페레로로쉐">
                             <button class="cart-btn">🛒</button>
                         </div>
                         <div class="product-info">
@@ -146,7 +146,7 @@
                     <!-- 상품 5 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/250x250/A8E6CF/333333?text=허니버터칩" alt="허니버터칩">
+                            <img src="img/두바이초콜릿.jpg" alt="두바이초콜릿">
                             <button class="cart-btn">🛒</button>
                         </div>
                         <div class="product-info">
@@ -162,7 +162,7 @@
                     <!-- 상품 6 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/250x250/BAE1FF/333333?text=소다크래커" alt="소다 크래커">
+                            <img src="img/가나초콜릿.jpg" alt="가나초콜릿">
                             <button class="cart-btn">🛒</button>
                         </div>
                         <div class="product-info">
@@ -178,7 +178,7 @@
                     <!-- 상품 7 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/250x250/FF9999/FFFFFF?text=딸기쿠키" alt="딸기 쿠키">
+                            <img src="img/하리보.jpg" alt="하리보">
                             <button class="cart-btn">🛒</button>
                         </div>
                         <div class="product-info">
@@ -194,7 +194,7 @@
                     <!-- 상품 8 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/250x250/C7CEEA/333333?text=오트밀쿠키" alt="오트밀 쿠키">
+                            <img src="img/수수깡젤리.jpg" alt="수수깡젤리">
                             <button class="cart-btn">🛒</button>
                         </div>
                         <div class="product-info">
@@ -210,7 +210,7 @@
                     <!-- 상품 9 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/250x250/FFDAC1/333333?text=땅콩과자" alt="땅콩 과자">
+                            <img src="img/졸넘기젤리.jpg" alt="줄넘기젤리">
                             <button class="cart-btn">🛒</button>
                         </div>
                         <div class="product-info">
@@ -291,7 +291,7 @@
 </body>
 
 
-    <script src="snack.js"></script>
+    
     <script>
         fetch("http://localhost:3000")
         .then((resp) => resp.json())
@@ -301,6 +301,13 @@
                 document.querySelector("#snackmemberList").appendChild(tr);
             });
         });
+
+        fetch("/login", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ user_id, user_pw })
+})
+
     </script>
 
     <script>
@@ -315,7 +322,6 @@
             });
         }
     </script>
-</body>
-</html>
+    <script src="snack.js"></script>
 </body>
 </html>

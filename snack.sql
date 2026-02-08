@@ -1,15 +1,22 @@
-drop table snackmember;
+drop table snackusers;
 --user 데이터 테이블
-CREATE table snackmember (
-            USER_ID varchar2(20) not null primary key
-           ,PASSWORD varchar2(20) not null
-           ,NAME varchar2(50) not null
-           ,TEL number(20) not null
-           ,EMAIL VARCHAR2(100)
+CREATE TABLE snack_member (
+    user_id VARCHAR2(50) PRIMARY KEY,
+    user_pw VARCHAR2(100) NOT NULL,
+    user_name VARCHAR2(50) NOT NULL,
+    email VARCHAR2(100) NOT NULL,
+    phone VARCHAR2(20) NOT NULL,
+    zipcode VARCHAR2(10) NOT NULL,
+    address VARCHAR2(200) NOT NULL,
+    homephone VARCHAR2(20),
+    role VARCHAR2(20) DEFAULT 'USER'
 );
 
+INSERT INTO snack_member (user_id, user_pw, user_name, email, phone, zipcode, address, homephone, role)
+VALUES ('admin', '1234', '관리자', 'admin@test.com', '010-1111-2222', '12345', '서울시 강남구', NULL, 'ADMIN');
+
 SELECT *
-from snackmember;
+from snackusers;
 
 --상품 데이터 테이블
 drop table Sproduct;

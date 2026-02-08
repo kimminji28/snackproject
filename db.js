@@ -1,14 +1,11 @@
-const obj = require('./test');
-const oracledb = require('./oracladb');
+const oracledb = require("oracledb");
 
-oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
-
-function getConnection() {
-    return await oracledb.getConnection({
-        user: "scott",
-        password: "tiger",
-        connectString: "192.168.217.1:1521/xe".
-    });
+async function getConnection() {
+  return await oracledb.getConnection({
+    user: "사용자계정",
+    password: "비밀번호",
+    connectString: "localhost:1521/xe"
+  });
 }
 
-module.exports = {getConnection, oracledb};
+module.exports = { getConnection };

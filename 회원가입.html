@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>회원가입</title>
+  <link rel="stylesheet" href="회원가입.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>회원가입</h2>
+
+    <form id="signupForm">
+
+      <div class="form-group">
+        <label for="id">아이디</label>
+        <div class="id-box">
+          <input type="text" id="id" required placeholder="아이디 입력" />
+          <button type="button" class="check-btn" onclick="checkDuplicateId()">중복확인</button>
+        </div>
+        <p class="msg" id="idMsg"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="pw">비밀번호</label>
+        <input type="password" id="pw" required placeholder="8글자 이상 입력해주세요" minlength="8"/>
+      </div>
+
+      <div class="form-group">
+        <label for="pw2">비밀번호 확인</label>
+        <input type="password" id="pw2" required placeholder="비밀번호 확인" minlength="8" />
+        <p class="msg" id="pwMsg"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="name">이름</label>
+        <input type="text" id="name" required placeholder="이름 입력" />
+      </div>
+
+      <div class="form-group">
+  <label for="zipcode">집주소</label>
+  <div class="id-box">
+    <input type="text" id="zipcode" placeholder="우편번호" readonly />
+    <button type="button" class="check-btn" onclick="execDaumPostcode()">주소검색</button>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="detailAddress">상세주소</label>
+  <input type="text" id="detailAddress" placeholder="상세주소 입력" />
+</div>
+
+      <div class="form-group">
+        <label for="phone">휴대폰번호</label>
+        <input type="text" id="phone" required placeholder="010-0000-0000" />
+      </div>
+
+      <div class="form-group">
+        <label for="homeTel">집전화번호 (선택)</label>
+        <input type="text" id="homeTel" placeholder="02-000-0000" />
+        <div class="note">※ 집전화번호는 입력하지 않아도 됩니다.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">이메일</label>
+        <input type="email" id="email" required placeholder="example@email.com" />
+      </div>
+
+      <div class="line"></div>
+
+      <div class="btn-area">
+        <button type="submit" class="submit-btn">회원가입 완료</button>
+        <button type="button" class="back-btn" onclick="history.back()">뒤로가기</button>
+      </div>
+
+    </form>
+  </div>
+  <script src="회원가입.js"></script>
+  <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      alert("회원가입이 완료되었습니다! 로그인 페이지로 이동합니다.");
+      location.href = "login.html";
+    });
+  </script>
+</body>
+</html>
